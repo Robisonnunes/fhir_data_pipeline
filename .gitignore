@@ -1,5 +1,6 @@
 .venv/
 *.pyc
+*.pyd
 __pycache__/
 *.pyo
 *.log
@@ -7,4 +8,3 @@ __pycache__/
 .DS_Store
 .idea/
 .vscode/
-
