@@ -1,7 +1,5 @@
-import os.path
 from pyspark.sql import SparkSession, functions as F, Window, DataFrame
 from pyspark.sql.types import *
-import os
 
 
 def build_spark_session(app_name: str, configs: dict) -> SparkSession:
@@ -41,6 +39,6 @@ def spark_extract_csv(SparkSession, path: str) -> DataFrame:
     try:
         spark = SparkSession
         df = spark.read.csv(path, header=True, inferSchema=True)
-        df.show(5)
+        return df
     except Exception as e:
         raise RecursionError(f"Failed to read data source")
